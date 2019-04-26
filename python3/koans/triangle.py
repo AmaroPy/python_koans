@@ -15,9 +15,11 @@
 #   about_triangle_project.py
 # and
 #   about_triangle_project_2.py
-#
+# a + b + c > 2c
 def triangle(a, b, c):
-    if a or b or c < 0:
+    if a < 0 or b < 0 or c < 0:
+        raise TriangleError
+    if a + b + c <= 2 * max(a, b, c):
         raise TriangleError
     if a == b == c:
         return 'equilateral'
