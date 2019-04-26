@@ -12,13 +12,13 @@ class AboutTriangleProject2(Koan):
     def test_illegal_triangles_throw_exceptions(self):
         # All sides should be greater than 0
         with self.assertRaises(TriangleError):
-            triangle(-5, 1, 3)
+            triangle(0, 1, 3)
         with self.assertRaises(TriangleError):
             triangle(3, 4, -5)
 
         # The sum of any two sides should be greater than the third one
         with self.assertRaises(TriangleError):
-            triangle(1, 1, 3)
+            triangle(5, 1, 3)
         with self.assertRaises(TriangleError):
             triangle(2, 5, 2)
 
