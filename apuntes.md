@@ -7,17 +7,6 @@ textodesalida | python -m json.tool
 ## Namedtupled (clases baratas)
 Convierte un diccionario a objeto.
 
-
-## Sets en python
-
-Son como arrays pero en vez [] va con {}
-
-{"banana","platano", "whatever"}
-
-Un set se parece mucho en un array, hasta ahora la única vez que lo he visto en producción es para usar:
-
-`intersection` que sirve para encontrar elementos en común entre 2 `set` y ejemplo tenemos debajo:
-
 ## Elementos en comun entre 2 arrays
 
 ```
