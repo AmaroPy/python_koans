@@ -39,9 +39,11 @@ class AboutComprehension(Koan):
 
         comprehension = [ '{0} and {1}'.format(egg, meat) for egg in list_of_eggs for meat in list_of_meats]
 
+        print(comprehension)
+
 
         self.assertEqual('poached egg and lite spam', comprehension[0])
-        self.assertEqual(6, len(comprehension))
+        self.assertEqual(__, len(comprehension))
 
     def test_creating_a_set_with_set_comprehension(self):
         comprehension = { x for x in 'aabbbcccc'}
@@ -55,7 +57,7 @@ class AboutComprehension(Koan):
 
         dict_comprehension = { k.upper(): weapon for k, weapon in dict_of_weapons.items() if weapon}
 
-        self.assertEqual(False, 'first' in dict_comprehension)
-        self.assertEqual(True, 'FIRST' in dict_comprehension)
+        self.assertEqual(__, 'first' in dict_comprehension)
+        self.assertEqual(__, 'FIRST' in dict_comprehension)
         self.assertEqual(5, len(dict_of_weapons))
         self.assertEqual(4, len(dict_comprehension))
