@@ -34,8 +34,27 @@ from runner.koan import *
 
 def score(dice):
     # You need to write this method
-    pass
+    score = 0
+    number_of_fives = dice.count(5)
+    if number_of_fives >= 3:
+        number_of_fives -= 3
+    if number_of_fives >0:
+        score += 50 * number_of_fives
 
+    number_of_ones = dice.count(1)
+    if number_of_ones >= 3:
+        score += 1000
+        number_of_ones -= 3
+
+    if number_of_ones >0:
+        score += 100 * number_of_ones
+        
+    for n in range(2, 7):
+        repeted_number = dice.count(n)
+        if repeted_number >= 3:
+            score += n * 100
+    return score
+    
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
         self.assertEqual(0, score([]))
